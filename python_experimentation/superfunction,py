@@ -1,0 +1,18 @@
+class Parent:
+  def __init__(self, txt, number):
+    self.message = txt
+    self.number = number
+
+  def printmessage(self):
+    print(self.message)
+  def number_call(self):
+    print(self.number)
+
+class Child(Parent):
+  def __init__(self, txt, number):
+    super().__init__(number)
+
+x = Child("Hello, and welcome!",3)
+
+x.number_call()
+
