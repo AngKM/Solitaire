@@ -1,2 +1,2 @@
-# Solitaire
+    # Solitaire
  Algorithm_Project
