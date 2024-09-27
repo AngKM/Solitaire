@@ -10,7 +10,7 @@ class Card(ft.GestureDetector):
     def __init__(self, solitaire, suite, rank):
         super().__init__()
         self.mouse_cursor = ft.MouseCursor.MOVE
-        self.drag_interval = 1
+        self.drag_interval = 5
         self.on_pan_start = self.start_drag
         self.on_pan_update = self.drag
         self.on_pan_end = self.drop
@@ -27,7 +27,7 @@ class Card(ft.GestureDetector):
             width=CARD_WIDTH,
             height=CARD_HEIGTH,
             border_radius=ft.border_radius.all(6),
-            content=ft.Image(src="/images/card_back.png"),
+            content=ft.Image(src="/images/card_back0.png"),
         )
         self.draggable_pile = [self]
 
@@ -40,7 +40,7 @@ class Card(ft.GestureDetector):
     def turn_face_down(self):
         """Hides card"""
         self.face_up = False
-        self.content.content.src = "/images/card_back.png"
+        self.content.content.src = "/images/card_back0.png"
         self.solitaire.update()
 
     def move_on_top(self):
